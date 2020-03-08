@@ -206,11 +206,11 @@ static int tloopctrl_raw_event(struct hid_device *hdev,
                 ldata->temp_input[6] = le64_to_cpup((__le64 *) (data + 30));  // setpoint
 
                 ldata->fan_input[0] = le16_to_cpup((__le16 *) (data + 34));  // rpm1
-                ldata->fan_input[1] = le16_to_cpup((__le16 *) (data + 36));  // rpm2
-                ldata->fan_input[2] = le16_to_cpup((__le16 *) (data + 38));  // rpm3
-                ldata->fan_input[3] = le16_to_cpup((__le16 *) (data + 40));  // rpm4
-                ldata->fan_input[4] = le16_to_cpup((__le16 *) (data + 42));  // rpm5
-                ldata->fan_input[5] = le16_to_cpup((__le16 *) (data + 44));  // rpm6
+                ldata->fan_input[1] = le16_to_cpup((__le16 *) (data + 39));  // rpm2
+                ldata->fan_input[2] = le16_to_cpup((__le16 *) (data + 44));  // rpm3
+                ldata->fan_input[3] = le16_to_cpup((__le16 *) (data + 49));  // rpm4
+                ldata->fan_input[4] = le16_to_cpup((__le16 *) (data + 54));  // rpm5
+                ldata->fan_input[5] = le16_to_cpup((__le16 *) (data + 59));  // rpm6
 
                 ldata->pwm_input[0] = 0;
 //                ldata->pwm_input[0] = le64_to_cpup((__le64 *) (data + 26));  // fan % (PID)
